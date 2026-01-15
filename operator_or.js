@@ -10,3 +10,14 @@ console.log("" || 0 || "Found") // "Found"
 console.log(false || null || "OK") // "OK"
 console.log(undefined || "" || 0 || "Final") // "Final"
 console.log("Start" || false || "End") // "Start"
+
+
+function getUserName(user) {
+    return user.name || 'Гость'
+}
+
+// Тесты:
+console.log(getUserName({ name: "Анна" })) // "Анна"
+console.log(getUserName({})) // "Гость"
+console.log(getUserName({ name: "" })) // "Гость"
+
